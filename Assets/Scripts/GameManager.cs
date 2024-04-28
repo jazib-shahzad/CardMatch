@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    #region VARIABLES
     public static GameManager Instance;
 
+    // Refrence to card back
     public Sprite card_Back;
+    // refrences to cards faces
+    [Header("Include all card faces to be used")]
     public Sprite[] card_Faces;
+
+    #endregion
 
     void Awake()
     {
@@ -24,6 +30,7 @@ public class GameManager : MonoBehaviour
     {
         
     }
+    // sets the sprite for card face according to card value var
     public Sprite SetCardFace(int i)
     {
         return card_Faces[i];
